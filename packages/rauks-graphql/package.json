@@ -1,0 +1,13 @@
+{
+  "name": "rauks-graphql",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "Rauksorg/Rauks",
+  "author": "Thibaut Constant",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "apollo-server": "^2.0.0",
+    "graphql": "^0.13.2"
+  }
+}
