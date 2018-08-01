@@ -3,11 +3,18 @@
   "version": "0.0.1",
   "main": "index.js",
   "repository": "Rauksorg/Rauks",
-  "author": "Thibaut Constant",
+  "author": "Thibaut CONSTANT <thibaut.constant@isisphinx.com>",
   "license": "GPL-3.0-or-later",
   "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon index.js"
+  },
   "dependencies": {
     "apollo-server": "^2.0.0",
     "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "casual": "^1.5.19",
+    "nodemon": "^1.18.3"
   }
 }
