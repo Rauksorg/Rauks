@@ -1,6 +1,9 @@
 {
   "name": "rauks-player",
   "version": "0.1.0",
+  "repository": "Rauksorg/Rauks",
+  "author": "Thibaut CONSTANT <thibaut.constant@isisphinx.com>",
+  "license": "GPL-3.0-or-later",
   "private": true,
   "devDependencies": {
     "react-native-scripts": "1.14.0",
