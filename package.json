@@ -6,7 +6,9 @@
     "nohoist": [
       "**/react-native", "**/react-native/**",
       "**/react-native-scripts", "**/react-native-scripts/**",
-      "**/expo", "**/expo/**"
+      "**/expo", "**/expo/**",
+      "**/apollo-boost", "**/apollo-boost/**",
+      "**/react-apollo", "**/react-apollo/**"
     ]
   }
 }
