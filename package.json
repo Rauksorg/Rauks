@@ -4,11 +4,12 @@
   "workspaces": {
     "packages": ["packages/*"],
     "nohoist": [
+      "rauks-player/react-scripts",
       "**/react-native", "**/react-native/**",
       "**/react-native-scripts", "**/react-native-scripts/**",
       "**/expo", "**/expo/**",
-      "**/apollo-boost", "**/apollo-boost/**",
-      "**/react-apollo", "**/react-apollo/**"
+      "rauks-player-native/apollo-boost", "rauks-player-native/apollo-boost/**",
+      "rauks-player-native/react-apollo", "rauks-player-native/react-apollo/**"
     ]
   }
 }
