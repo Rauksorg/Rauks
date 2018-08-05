@@ -5,6 +5,9 @@
     },
     {
       "path": "packages\\rauks-graphql"
+    },
+    {
+      "path": "packages\\rauks-player"
     }
   ],
   "settings": {}
