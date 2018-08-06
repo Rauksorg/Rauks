@@ -8,6 +8,9 @@
     },
     {
       "path": "packages\\rauks-player"
+    },
+    {
+      "path": "packages\\rauks-player-native"
     }
   ],
   "settings": {}
