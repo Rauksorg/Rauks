@@ -6,17 +6,7 @@
       "packages/*"
     ],
     "nohoist": [
-      "rauks-player/react-scripts",
-      "**/react-native",
-      "**/react-native/**",
-      "**/react-native-scripts",
-      "**/react-native-scripts/**",
-      "**/expo",
-      "**/expo/**",
-      "rauks-player-native/apollo-boost",
-      "rauks-player-native/apollo-boost/**",
-      "rauks-player-native/react-apollo",
-      "rauks-player-native/react-apollo/**"
+      "rauks-player/react-scripts"
     ]
   },
   "devDependencies": {
