@@ -2,14 +2,24 @@
   "version": "0.0.1",
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"],
+    "packages": [
+      "packages/*"
+    ],
     "nohoist": [
       "rauks-player/react-scripts",
-      "**/react-native", "**/react-native/**",
-      "**/react-native-scripts", "**/react-native-scripts/**",
-      "**/expo", "**/expo/**",
-      "rauks-player-native/apollo-boost", "rauks-player-native/apollo-boost/**",
-      "rauks-player-native/react-apollo", "rauks-player-native/react-apollo/**"
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-scripts",
+      "**/react-native-scripts/**",
+      "**/expo",
+      "**/expo/**",
+      "rauks-player-native/apollo-boost",
+      "rauks-player-native/apollo-boost/**",
+      "rauks-player-native/react-apollo",
+      "rauks-player-native/react-apollo/**"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.14.0"
   }
 }
