@@ -1,12 +1,13 @@
-const typeDefs2 = gql`
+const dice = gql`
   type Dice {
     name: String
     description: String
+    image: String
     backgroundColor: String
     color: String
     faces: [Face]
-    minNumber:Int
-    maxNumber:Int
+    min: Int
+    max: Int
   }
   type Face {
     name: String
@@ -14,3 +15,4 @@ const typeDefs2 = gql`
     image: String
   }
 `
+export default dice
