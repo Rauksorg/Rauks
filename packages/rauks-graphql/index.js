@@ -1,35 +1,19 @@
-const { ApolloServer, gql, MockList } = require('apollo-server')
-const casual = require('casual')
+const { ApolloServer, gql } = require('apollo-server')
+const { merge } = require('lodash')
 
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: Author
-  }
-  type Author {
-    name: String
-    books: [Book]
-  }
+const { Player } = require('./schema/player')
+const { Book, bookMocks } = require('./schema/book')
+
+const Query = gql`
   type Query {
-    getBooks: [Book]
-    getAuthors: [Author]
+    _empty: String
   }
 `
-const mocks = {
-  Book: () => ({
-    title: casual.title
-  }),
-  Author: () => ({
-    name: casual.name,
-    books: () => new MockList([2, 6])
-  }),
-  Query: () => ({
-    getAuthors: () => new MockList([2, 6]),
-    getBooks: () => new MockList([2, 6])
-  })
-}
-const server = new ApolloServer({ typeDefs, mocks })
 
+const mocks = merge(bookMocks)
+const typeDefs = [Query, Book, Player]
+
+const server = new ApolloServer({ typeDefs, mocks })
 server.listen().then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`)
 })
