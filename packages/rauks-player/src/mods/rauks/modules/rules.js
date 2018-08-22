@@ -1,0 +1,1 @@
+// also add an ammo multiplier eg 3 ammo = 300Bar
