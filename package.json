@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "prettier": "^1.14.0"
+  },
+  "scripts": {
+    "start": "yarn workspace rauks-graphql start | yarn workspace rauks-player start"
   }
 }
