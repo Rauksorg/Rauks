@@ -30,7 +30,7 @@ const Books = props => {
       {({ loading, error, data }) => {
         return (
           <div className={classes.root}>
-            <AppBar position="static" color="default">
+            <AppBar position="static" color="primary">
               <Toolbar>
                 <Typography variant="title" color="inherit">
                   {(() => {

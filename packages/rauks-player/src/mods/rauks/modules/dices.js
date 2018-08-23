@@ -1,20 +1,22 @@
-const dices = [dice1]
+const dices = [blueDice]
 
-const dice1 = {
-  name: String,
-  description: String,
-  image: String,
-  backgroundColor: String,
-  color: String,
-  faces: [face1],
+const blueDice = {
+  name: 'Dés bleu',
+  description: '',
+  image: '',
+  backgroundColor: '#2b78e4',
+  color: '#ffffff',
+  faces: [faces.echec],
   min: Int,
   max: Int
 }
 
-const face1 = {
-  name: String,
-  description: String,
-  image: String
+const faces = {
+  echec: {
+    name: '',
+    description: '',
+    image: ''
+  }
 }
 
 export default dices

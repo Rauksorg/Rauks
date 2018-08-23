@@ -29,7 +29,7 @@ const PlayerList = ({ classes }) => (
         if (loading) return 'Loading...'
         if (error) return `Error! ${error.message}`
         return data.getPlayers.map((value, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} button>
             <Avatar>I</Avatar>
             <ListItemText
               primary={`${data.getPlayers[index].name} ${
