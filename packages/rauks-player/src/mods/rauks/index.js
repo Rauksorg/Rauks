@@ -6,7 +6,7 @@ import dices from './dices'
 // import themes from './themes'
 
 const infos = {
-  name: 'My mod name',
+  name: 'Rauks Classic',
   description: 'The description of the game',
   system: 'R&R',
   language: 'fr-FR'
