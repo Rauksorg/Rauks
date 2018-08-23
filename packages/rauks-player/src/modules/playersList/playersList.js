@@ -14,7 +14,9 @@ const GET_PLAYERS = gql`
   {
     getPlayers {
       name
-      result
+      diceResult {
+        result
+      }
     }
   }
 `
@@ -31,7 +33,7 @@ const PlayerList = ({ classes }) => (
             <Avatar>I</Avatar>
             <ListItemText
               primary={`${data.getPlayers[index].name} ${
-                data.getPlayers[index].result
+                data.getPlayers[index].diceResult.result
               }`}
             />
             <ListItemSecondaryAction>
