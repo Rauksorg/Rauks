@@ -1,7 +1,7 @@
 const { ApolloServer, gql } = require('apollo-server')
 const { merge } = require('lodash')
 
-const { Player } = require('./schema/player')
+const { Player, playerMocks } = require('./schema/player')
 const { Book, bookMocks } = require('./schema/book')
 
 const Query = gql`
@@ -10,7 +10,7 @@ const Query = gql`
   }
 `
 
-const mocks = merge(bookMocks)
+const mocks = merge(bookMocks, playerMocks)
 const typeDefs = [Query, Book, Player]
 
 const server = new ApolloServer({ typeDefs, mocks })
