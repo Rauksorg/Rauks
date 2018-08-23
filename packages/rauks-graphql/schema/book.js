@@ -1,5 +1,5 @@
 const { gql, MockList } = require('apollo-server')
-const casual = require('casual')
+const casual = require('casual').fr_FR
 
 exports.Book = gql`
   type Book {
@@ -21,7 +21,7 @@ exports.bookMocks = {
     title: casual.title
   }),
   Author: () => ({
-    name: casual.name,
+    name: casual.full_name,
     books: () => new MockList([2, 6])
   }),
   Query: () => ({
