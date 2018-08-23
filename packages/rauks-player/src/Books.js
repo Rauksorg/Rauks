@@ -7,6 +7,8 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
+import { PlayerList } from './modules/playersList'
+
 const styles = {
   root: {
     flexGrow: 1
@@ -26,17 +28,20 @@ const Books = props => {
   return (
     <Query query={GET_BOOKS}>
       {({ loading, error, data }) => {
-        if (loading) return <p>{'Loading...'}</p>
-        if (error) return <p>{`Error! ${error.message}`}</p>
         return (
           <div className={classes.root}>
             <AppBar position="static" color="default">
               <Toolbar>
                 <Typography variant="title" color="inherit">
-                  {data.getBooks[0].title}
+                  {(() => {
+                    if (loading) return 'Loading...'
+                    if (error) return `Error! ${error.message}`
+                    return data.getBooks[0].title
+                  })()}
                 </Typography>
               </Toolbar>
             </AppBar>
+            <PlayerList />
           </div>
         )
       }}
