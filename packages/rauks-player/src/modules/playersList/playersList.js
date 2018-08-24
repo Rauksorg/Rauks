@@ -58,7 +58,7 @@ const PlayerList = ({ classes }) => (
               <Avatar>I</Avatar>
               <ListItemText primary={`${player.name}`} />
               <ListItemSecondaryAction>
-                <Avatar>
+                <Avatar style={{backgroundColor:playerDice.backgroundColor}}>
                   {getDiceResult(playerDice, player.diceResult.result)}
                 </Avatar>
               </ListItemSecondaryAction>

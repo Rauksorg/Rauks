@@ -28,7 +28,7 @@ exports.playerMocks = {
   }),
   DiceResult: () => ({
     result: casual.random,
-    selectedDice: 0,
+    selectedDice: casual.integer(from = 0, to = 1),
     timestamp: casual.unix_time
   })
 }
