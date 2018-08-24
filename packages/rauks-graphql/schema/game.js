@@ -4,7 +4,7 @@ const casual = require('casual').fr_FR
 exports.Game = gql`
   type Game {
     title: String
-    mode: String
+    mod: String
   }
   extend type Query {
     getGame: Game
@@ -14,6 +14,6 @@ exports.Game = gql`
 exports.gameMocks = {
   Game: () => ({
     title: casual.title,
-    mode: 'rauks'
+    mod: 'rauks'
   })
 }

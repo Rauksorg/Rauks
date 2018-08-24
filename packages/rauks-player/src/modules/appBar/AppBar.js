@@ -11,7 +11,6 @@ const GET_GAME = gql`
   {
     getGame {
       title
-      mode
     }
   }
 `

@@ -15,7 +15,7 @@ exports.Player = gql`
   }
   type DiceResult {
     result: Float
-    selectedDice: String
+    selectedDice: Int
     timestamp: Int
   }
   extend type Query {
@@ -28,6 +28,7 @@ exports.playerMocks = {
   }),
   DiceResult: () => ({
     result: casual.random,
+    selectedDice: 0,
     timestamp: casual.unix_time
   })
 }

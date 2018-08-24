@@ -1,6 +1,6 @@
 // import characters from './characters'
 // import rules from './rules'
-import dices from './dices'
+import dices from './modules/dices'
 // import ressources from './ressources'
 // import states from './states'
 // import themes from './themes'

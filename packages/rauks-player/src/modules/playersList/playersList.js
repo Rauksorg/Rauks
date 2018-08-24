@@ -7,20 +7,41 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Avatar from '@material-ui/core/Avatar'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
+import mods from '../../mods/index'
 
 const styles = theme => ({})
-
 const GET_PLAYERS = gql`
   {
     getPlayers {
       name
       diceResult {
         result
+        selectedDice
       }
+    }
+    getGame {
+      mod
     }
   }
 `
-// const rand = myArray[Math.floor(Math.random() * myArray.length)]
+
+const randomArrayElement = (myArray, seed) => {
+  return myArray[Math.floor(seed * myArray.length)]
+}
+const getMod = data => {
+  return data.getGame.mod
+}
+const getPlayer = (data, playerIndex) => {
+  return data.getPlayers[playerIndex]
+}
+const getPlayerDice = (mods, selectedMod, player) => {
+  const selectedDice = player.diceResult.selectedDice
+  const PlayerDice = mods[selectedMod].dices[selectedDice]
+  return PlayerDice
+}
+const getDiceResult = (PlayerDice, result) => {
+  return randomArrayElement(PlayerDice.faces, result).name
+}
 
 const PlayerList = ({ classes }) => (
   <List>
@@ -28,19 +49,22 @@ const PlayerList = ({ classes }) => (
       {({ loading, error, data }) => {
         if (loading) return 'Loading...'
         if (error) return `Error! ${error.message}`
-        return data.getPlayers.map((value, index) => (
-          <ListItem key={index} button>
-            <Avatar>I</Avatar>
-            <ListItemText
-              primary={`${data.getPlayers[index].name} ${
-                data.getPlayers[index].diceResult.result
-              }`}
-            />
-            <ListItemSecondaryAction>
+        const selectedMod = getMod(data)
+        return data.getPlayers.map((value, playerIndex) => {
+          const player = getPlayer(data, playerIndex)
+          const playerDice = getPlayerDice(mods, selectedMod, player)
+          return (
+            <ListItem key={playerIndex} button>
               <Avatar>I</Avatar>
-            </ListItemSecondaryAction>
-          </ListItem>
-        ))
+              <ListItemText primary={`${player.name}`} />
+              <ListItemSecondaryAction>
+                <Avatar>
+                  {getDiceResult(playerDice, player.diceResult.result)}
+                </Avatar>
+              </ListItemSecondaryAction>
+            </ListItem>
+          )
+        })
       }}
     </Query>
   </List>
