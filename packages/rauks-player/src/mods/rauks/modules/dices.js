@@ -38,11 +38,11 @@ const faces = {
 
 const blueDice = {
   name: 'Dés bleu',
-  description: 'Dés correspondant aux actions relativement simples',
+  description: 'Dés correspondant aux actions classiques',
   image: '',
   backgroundColor: '#2b78e4',
   color: '#ffffff',
-  faces: [faces.success,faces. critique,faces.réussite compétence,faces.4, faces.3,faces.2,faces.échec critique],
+  faces: [faces.epicSuccess,faces.skill,faces.four, faces.three,faces.two,faces.epicFail],
   min: 1,
   max: 1
 }
@@ -52,7 +52,7 @@ const orangeDice = {
   image: '',
   backgroundColor: '#2b78e4',
   color: '#ffffff',
-  faces: [faces.réussite, faces.epicSuccess,faces.réussite, faces.skill,faces.four, faces.three,faces.fail,faces.epicFail],
+  faces: [faces.epicSuccess,faces.skill,faces.four, faces.three,faces.fail,faces.epicFail],
   min: 1,
   max: 1
 }
@@ -62,7 +62,7 @@ const redDice = {
   image: '',
   backgroundColor: '#cf2a27',
   color: '#ffffff',
-  faces: [faces.réussite critique,faces.réussite compétence,faces.4, faces.échec simple,faces.échec critique,faces.échec critique],
+  faces: [faces.epicSuccess,faces.skill,faces.four, faces.fail,faces.epicFail,faces.epicFail],
   min: 1,
   max: 1
 }
