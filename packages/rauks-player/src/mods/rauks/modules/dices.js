@@ -87,5 +87,5 @@ const damageDice = {
   max: 9
 }
 
-const dices = [blueDice,orangeDice,redDice]
+const dices = [blueDice,orangeDice,redDice,damageDice]
 export default dices
