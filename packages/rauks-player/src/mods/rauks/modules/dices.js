@@ -6,6 +6,12 @@ import threeImg from './dices/three.svg'
 import twoImg from './dices/two.svg'
 import failImg from './dices/fail.svg'
 import doubleSuccessImg from './dices/dsuccess.svg'
+import blueDiceImg from './dices/3Dblue.svg'
+import orangeDiceImg from './dices/3Dorange.svg'
+import redDiceImg from './dices/3Dred.svg'
+import darkDiceImg from './dices/3Ddark.svg'
+
+
 
 const faces = {
   epicSuccess: {
@@ -58,7 +64,7 @@ const faces = {
 const blueDice = {
   name: 'Dés bleu',
   description: 'Dés correspondant aux actions classiques',
-  image: '',
+  image: blueDiceImg,
   backgroundColor: '#2b78e4',
   color: '#ffffff',
   faces: [
@@ -75,7 +81,7 @@ const blueDice = {
 const orangeDice = {
   name: 'Dés orange',
   description: 'Dés correspondant aux actions difficiles',
-  image: '',
+  image: orangeDiceImg,
   backgroundColor: '#ff9900',
   color: '#ffffff',
   faces: [
@@ -92,7 +98,7 @@ const orangeDice = {
 const redDice = {
   name: 'Dés rouge',
   description: 'Dés correspondant aux actions les plus difficiles et risquées',
-  image: '',
+  image: redDiceImg,
   backgroundColor: '#cf2a27',
   color: '#ffffff',
   faces: [
@@ -109,7 +115,7 @@ const redDice = {
 const damageDice = {
   name: 'Dés dé dégâts',
   description: `Dés lancés lors d'un jet de dégâts`,
-  image: '',
+  image: darkDiceImg,
   backgroundColor: '#333333',
   color: '#ffffff',
   faces: [faces.damage, faces.resist],

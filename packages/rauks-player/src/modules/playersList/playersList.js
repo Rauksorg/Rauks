@@ -9,7 +9,16 @@ import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import mods from '../../mods/index'
 
-const styles = theme => ({})
+const styles = theme => ({
+  bigAvatar: {
+    width: 60,
+    height: 60
+  },
+  img: {
+    width: '80%',
+    height: '80%'
+  }
+})
 const GET_PLAYERS = gql`
   {
     getPlayers {
@@ -63,6 +72,8 @@ const PlayerList = ({ classes }) => (
               <ListItemText primary={`${player.name}`} />
               <ListItemSecondaryAction>
                 <Avatar
+                  classes={{ img: classes.img }}
+                  className={classes.bigAvatar}
                   src={playerDiceResult.image}
                   style={{ backgroundColor: playerDice.backgroundColor }}
                 />
