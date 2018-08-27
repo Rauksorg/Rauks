@@ -34,6 +34,16 @@ const faces = {
       description: `Réussite de l'action si le personnage dispose de 4 ou plus dans sa caractéristiques`,
       image: '/'
     },
+    damage:{
+      name: '!',
+      description: `Le dé occasionne un point de dégâts`,
+      image: '/'
+    },
+    resist:{
+      name: 'x',
+      description: `Le dé n'occasionne pas de dégâts`,
+      image: '/'
+    }
 }
 
 const blueDice = {
@@ -66,6 +76,16 @@ const redDice = {
   min: 1,
   max: 1
 }
+const damageDice = {
+  name: 'Dés dé dégâts',
+  description: `Dés lancés lors d'un jet de dégâts`,
+  image: '',
+  backgroundColor: '#cf2a27',
+  color: '#ffffff',
+  faces: [faces.Damage,faces.resist],
+  min: 2,
+  max: 9
+}
 
-const dices = [blueDice,orangeDice, redDice]
+const dices = [blueDice,orangeDice,redDice]
 export default dices
