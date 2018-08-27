@@ -1,48 +1,57 @@
+import epicFailImg from './dices/efail.svg'
+import fourImg from './dices/four.svg'
+import skillImg from './dices/skill.svg'
+import successImg from './dices/success.svg'
+import threeImg from './dices/three.svg'
+import twoImg from './dices/two.svg'
+import failImg from './dices/fail.svg'
+import doubleSuccessImg from './dices/dsuccess.svg'
+
 const faces = {
   epicSuccess: {
     name: 'réussite critique',
     description: `Réussite de l'action, et le joueur propose un fait supplémentaire au MJ`,
-    image: '/'
+    image: successImg
   },
   fail: {
     name: 'échec simple',
     description: `Echec de l'action`,
-    image: '/'
+    image: failImg
   },
   skill: {
     name: 'réussite compétence',
     description: `Réussite de l'action si le personnage peut justifier d'une compétence lors du jet ou éventuellement d'un trait ou d'une circonstance`,
-    image: '/'
+    image: skillImg
   },
   epicFail: {
     name: 'échec critique',
     description: `Echec de l'action, en cas de relance l'échec deviendra critique ne sera plus relançable et provoquera des conséquences supplémentaires`,
-    image: '/'
+    image: epicFailImg
   },
   two: {
     name: '2',
     description: `Réussite de l'action si le personnage dispose de 2 ou plus dans sa caractéristiques`,
-    image: '/'
+    image: twoImg
   },
   three: {
     name: '3',
     description: `Réussite de l'action si le personnage dispose de 3 ou plus dans sa caractéristiques`,
-    image: '/'
+    image: threeImg
   },
   four: {
     name: '4',
     description: `Réussite de l'action si le personnage dispose de 4 ou plus dans sa caractéristiques`,
-    image: '/'
+    image: fourImg
   },
   damage: {
     name: '!',
     description: `Le dé occasionne un point de dégâts`,
-    image: '/'
+    image: doubleSuccessImg
   },
   resist: {
     name: 'x',
     description: `Le dé n'occasionne pas de dégâts`,
-    image: '/'
+    image: successImg
   }
 }
 

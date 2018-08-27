@@ -40,7 +40,7 @@ const getPlayerDice = (mods, selectedMod, player) => {
   return PlayerDice
 }
 const getDiceResult = (PlayerDice, result) => {
-  return randomArrayElement(PlayerDice.faces, result).name
+  return randomArrayElement(PlayerDice.faces, result)
 }
 
 const PlayerList = ({ classes }) => (
@@ -53,14 +53,19 @@ const PlayerList = ({ classes }) => (
         return data.getPlayers.map((value, playerIndex) => {
           const player = getPlayer(data, playerIndex)
           const playerDice = getPlayerDice(mods, selectedMod, player)
+          const playerDiceResult = getDiceResult(
+            playerDice,
+            player.diceResult.result
+          )
           return (
             <ListItem key={playerIndex} button>
               <Avatar>I</Avatar>
               <ListItemText primary={`${player.name}`} />
               <ListItemSecondaryAction>
-                <Avatar style={{ backgroundColor: playerDice.backgroundColor }}>
-                  {getDiceResult(playerDice, player.diceResult.result)}
-                </Avatar>
+                <Avatar
+                  src={playerDiceResult.image}
+                  style={{ backgroundColor: playerDice.backgroundColor }}
+                />
               </ListItemSecondaryAction>
             </ListItem>
           )
