@@ -1,10 +1,12 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
-import ListItemText from '@material-ui/core/ListItemText'
-import Avatar from '@material-ui/core/Avatar'
+import {
+  ListItemText,
+  Avatar,
+  ListItemSecondaryAction,
+  ListItem,
+  List
+} from '@material-ui/core'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import mods from '../../mods'
