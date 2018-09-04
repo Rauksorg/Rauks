@@ -17,7 +17,7 @@ const GET_GAME = gql`
 
 const styles = {}
 
-const Books = ({ classes }) => (
+const AppliBar = ({ classes }) => (
   <Query query={GET_GAME}>
     {({ loading, error, data }) => {
       return (
@@ -37,4 +37,4 @@ const Books = ({ classes }) => (
   </Query>
 )
 
-export default withStyles(styles)(Books)
+export default withStyles(styles)(AppliBar)
