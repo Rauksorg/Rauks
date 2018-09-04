@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Avatar from '@material-ui/core/Avatar'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
-import mods from '../../mods/index'
+import mods from '../../mods'
 
 const styles = theme => ({
   bigAvatar: {
@@ -52,7 +52,7 @@ const getDiceResult = (PlayerDice, result) => {
   return randomArrayElement(PlayerDice.faces, result)
 }
 
-const PlayerList = ({ classes }) => (
+const PlayersList = ({ classes }) => (
   <List>
     <Query query={GET_PLAYERS}>
       {({ loading, error, data }) => {
@@ -86,4 +86,4 @@ const PlayerList = ({ classes }) => (
   </List>
 )
 
-export default withStyles(styles)(PlayerList)
+export default withStyles(styles)(PlayersList)

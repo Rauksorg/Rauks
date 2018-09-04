@@ -1,3 +1,3 @@
 import AppBar from './appBar/AppBar'
-import PlayerList from './playersList/PlayersList'
-export { AppBar, PlayerList }
+import PlayersList from './playersList/PlayersList'
+export { AppBar, PlayersList }

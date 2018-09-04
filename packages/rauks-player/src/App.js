@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import theme from './config/muiTheme'
 
-import { AppBar, PlayerList } from './modules'
+import { AppBar, PlayersList } from './modules'
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/'
@@ -17,7 +17,7 @@ const App = () => (
     <ApolloProvider client={client}>
       <MuiThemeProvider theme={theme}>
         <AppBar />
-        <PlayerList />
+        <PlayersList />
       </MuiThemeProvider>
     </ApolloProvider>
   </React.Fragment>
