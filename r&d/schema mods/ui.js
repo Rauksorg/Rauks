@@ -10,3 +10,4 @@ const ui = gql`
     image: Int
   }
 `
+// TEST autofetch
